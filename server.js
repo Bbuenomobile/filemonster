@@ -4,7 +4,11 @@ const app = express();
 const PORT = 8100;
 
 
-app.use("/uploads" ,express.static("uploads"))
+app.use("/uploads" ,express.static(path.join(__dirname,"uploads")));
+
+app.use("/" , (req,res,next) => {
+    res.send("Serving Files!");
+})
   
 app.listen(PORT, (err) =>{
     if (!err) {
