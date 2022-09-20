@@ -1,0 +1,25 @@
+{
+  "name": "files-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bbuenomobile/files-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bbuenomobile/files-server/issues"
+  },
+  "homepage": "https://github.com/Bbuenomobile/files-server#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20",
+    "serve-static": "^1.15.0"
+  }
+}
