@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require("path");
 const app = express();
-const PORT = 7000;
+const PORT = 8100;
 
 
 app.use("/uploads" ,express.static("uploads"))
