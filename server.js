@@ -8,6 +8,7 @@ app.use(cors());
 
 app.get("/uploads/:file", (req,res,next) => {
     console.log(req.params.file);
+    console.log(path.join(__dirname, "../" , `/uploads/${req.params.file}`));
     res.sendFile(path.join(__dirname, "../" , `/uploads/${req.params.file}`), (err) => {
         if (!err) {
             console.log("File Sent!");
