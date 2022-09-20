@@ -5,12 +5,21 @@ const PORT = process.env.PORT || 8100;
 const cors = require('cors');
 
 app.use(cors());
-app.use(express.static("uploads"));
+
+app.get("/uploads/:file", (req,res,next) => {
+    console.log(req.params.file);
+    res.sendFile(`uploads/${file}`, (err) => {
+        if (!err) {
+            console.log("File Sent!");
+        } else {
+            console.log(err);
+        }
+    })
+})
 
 app.listen(PORT, (err) =>{
     if (!err) {
         console.log("Files Serving At :8100");
-        console.log("From - ", "/uploads");
     } else {
         console.log(err);
     }
