@@ -5,7 +5,7 @@ const PORT = 8100;
 const cors = require('cors');
 
 app.use(cors());
-app.use(express.static(path.join(__dirname,"uploads")));
+app.use(express.static("uploads"));
 
 app.get("/" , (req,res,next) => {
     res.send("Serving Files!");
@@ -14,7 +14,7 @@ app.get("/" , (req,res,next) => {
 app.listen(PORT, (err) =>{
     if (!err) {
         console.log("Files Serving At :8100");
-        console.log("From - ", path.join(__dirname,"uploads"));
+        console.log("From - ", "/uploads");
     } else {
         console.log(err);
     }
