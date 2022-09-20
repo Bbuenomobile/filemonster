@@ -6,7 +6,7 @@ const PORT = 8100;
 
 app.use("/uploads" ,express.static(path.join(__dirname,"uploads")));
 
-app.use("/" , (req,res,next) => {
+app.get("/" , (req,res,next) => {
     res.send("Serving Files!");
 })
   
